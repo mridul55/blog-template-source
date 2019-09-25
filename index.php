@@ -27,6 +27,7 @@ $start_form=($page-1)*$per_page;
 
 	<div class="contentsection contemplete clear">
 		<div class="maincontent clear">
+			<h2> change project</h2>
 
 	  <?php
         $query="Select * from tbl_post limit $start_form,$per_page";
