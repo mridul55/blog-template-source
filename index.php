@@ -30,7 +30,7 @@ $start_form=($page-1)*$per_page;
 			<h2> change project</h2>
 
 	  <?php
-        $query="Select * from  limit $start_form,$per_page";
+        $query="Select * from tbl_post limit $start_form,$per_page";
           $post=$db->select($query);
           if($post){
          while($result=$post->fetch_assoc()){
