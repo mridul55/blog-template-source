@@ -1,3 +1,7 @@
+<?php 
+$path = realpath(dirname(__FILE__));
+include $path.'/../config/config.php';
+?>
 <?php
 Class Database{
 	public $host   = DB_HOST;
@@ -36,10 +40,9 @@ Class Database{
 	public function insert($query){
 	$insert_row = $this->link->query($query) or die($this->link->error.__LINE__);
 	if($insert_row){
-		header("Location: index.php?msg=".urlencode('Data Inserted successfully.'));
-		exit();
+		return $insert_row;
 	} else {
-		die("Error :(".$this->link->errno.")".$this->link->error);
+		return false;
 	}
   }
   

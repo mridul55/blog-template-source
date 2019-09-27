@@ -24,7 +24,7 @@ $start_form=($page-1)*$per_page;
 ?>
 
 
-
+  
 	<div class="contentsection contemplete clear">
 		<div class="maincontent clear">
 			<h2> change project</h2>
@@ -42,7 +42,7 @@ $start_form=($page-1)*$per_page;
 
     <h4><?php echo $fm->formateDate($result['date']);?> By <a href="#"><?php echo $result['author'];?></a></h4>
 
-	<a href="#"><img src="admin/upload/<?php echo $result['image'];?>" alt="post image"/></a>
+	<a href="#"><img src="admin/<?php echo $result['image'];?>" alt="post image"/></a>
 	
 	<?php echo $fm->textShorten($result['body']);?>
 
