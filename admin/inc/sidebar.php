@@ -19,7 +19,7 @@
         </li>
         <li><a class="menuitem">Category Option</a>
             <ul class="submenu">
-                <li><a href="addpage.php">Add New Page</a> </li>
+                <li><a href="addcat.php">Add New Page</a> </li>
                 <li><a href="catlist.php">Category List</a> </li>
             </ul>
         </li>

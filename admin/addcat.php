@@ -1,5 +1,16 @@
 ﻿<?php include 'inc/header.php';?>
 <?php include 'inc/sidebar.php';?>
+        <?php include '../class/Category.php';
+            $pt = new Category();
+        ?>
+
+     <?php 
+         if ($_SERVER['REQUEST_METHOD']=='POST') {
+       $pt->catinsert($_POST);
+      }
+    ?>
+
+
         <div class="grid_10">
 		
             <div class="box round first grid">
