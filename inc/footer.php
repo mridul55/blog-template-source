@@ -9,7 +9,18 @@
 			<li><a href="#">Privacy</a></li>
 		</ul>
 	  </div>
-	  <p>&copy; Copyright Training with live project.</p>
+    <?php
+$query="SELECT * from tbl_footer where id='1' ";
+$data=$db->select($query);
+if ($data) {
+    while ($result=$data->fetch_assoc()) {
+        
+ 
+?>
+
+	  <p>&copy; <?php echo $result['name'];?> </p>
+
+<?php } }?>	  
 	</div>
 	<div class="fixedicon clear">
 		<a href="http://www.facebook.com"><img src="images/fb.png" alt="Facebook"/></a>

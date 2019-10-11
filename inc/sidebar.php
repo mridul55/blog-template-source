@@ -2,10 +2,12 @@
 	<div class="samesidebar clear">
 		<h2>Categories</h2>
 		<ul>
-
+ 
 			<?php
-			$query=" Select *from tbl_category ";
-			$category=$db->select($query);
+			/*include_once '../lib/Database.php';
+			$db = new Database();*/
+			$query="SELECT * from tbl_category";
+			$category = $db->select($query);
 			if($category){
 				while($result=$category->fetch_assoc()){
 					?>
@@ -31,7 +33,7 @@
 
 						<h3><a href="post.php?id=<?php echo $result['id'];?>"> <?php echo $result['titel'];?></h3>
 
-							<a href="post.php?id=<?php echo $result['id'];?>"><img src="admin/upload/<?php echo $result['image'];?>" alt="post image"/> </a>
+							<a href="post.php?id=<?php echo $result['id'];?>"><img src="admin/<?php echo $result['image'];?>" alt="post image"/> </a>
 
 							<p><?php echo $fm->textShorten($result['body'],100); ?> </p>
 						</div>

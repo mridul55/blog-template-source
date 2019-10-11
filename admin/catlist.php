@@ -2,51 +2,70 @@
 <?php include 'inc/sidebar.php';?>
 
 
-        <div class="grid_10">
-            <div class="box round first grid">
-                <h2>Category List</h2>
-            <div class="block">        
-                    <table class="data display datatable" id="example">
-					<thead>
-						<tr>
-							<th>Serial No.</th>
-							<th>Category Name</th>
-							<th>Action</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr class="odd grade">
+<div class="grid_10">
+<div class="box round first grid">
+<h2>Category List</h2>
+<?php 
+if (isset($_GET['delcat'])) {
+     $delid=$_GET['delcat'];
+     $delquery=" DELETE from tbl_category where id='$delid'";
+     $deldata=$db->delete($delquery);
 
-							<?php
-							$query=" Select *from tbl_category";
-							$post=$db->select($query);
-							if($post){
-								while($result=$post->fetch_assoc()){
-									?>
-							<td><?php echo $result['id'];?></td>
-							<td><?php echo $result['name'];?></td>
-							<td><a href="catlistedit.php?eid=<?php echo $result['id']; ?>">Edit</a> 
+      if ($deldata) {
+            echo "<span class='success'> Category DELETED Successfuly</span>";
+        } else {
+             echo "<span class='error'> Category Not DELETED </span>";
+        }
 
-							|| <a href="">Delete</a></td>
-						</tr>
-						  <?php } } else { echo "no value"; } ?>
-					</tbody>
-				</table>
-               </div>
-         
-            </div>
-        </div>
+}
+?>
+
+<div class="block">        
+<table class="data display datatable" id="example">
+<thead>
+<tr>
+<th>Serial No.</th>
+<th>Category Name</th>
+<th>Action</th>
+</tr>
+</thead>
+	<tbody>
+	<?php
+	$query="SELECT * from tbl_category order by id desc"; 
+	$category=$db->select($query);
+	if ($category) {
+		$i=0;
+		while ($result=$category->fetch_assoc()) {
+			$i++; 
+	?>	
+	<tr class="odd gradeX">
+		<td><?php echo $i; ?></td>
+		<td><?php echo $result['name'];?></td>
+		<td><a href="catlistedit.php?catid=<?php echo $result['id']; ?>" > Edit </a> || 
+
+			<a onclick="return confirm('Are U sure to Delete!');" href="?delcat=<?php echo $result['id']; ?>" > Delete </a> </td>
+
+	</tr>
+
+
+	<?php } }?> 
+	</tbody>
+</table>
+</div>
+
+</div>
+</div>
 <script type="text/javascript">
 
-        $(document).ready(function () {
-            setupLeftMenu();
+$(document).ready(function () {
+setupLeftMenu();
 
-            $('.datatable').dataTable();
-            setSidebarHeight();
+$('.datatable').dataTable();
+setSidebarHeight();
 
 
-        });
-    </script>
-        
+});
+</script>
+
 <?php include 'inc/footer.php';?>
 

@@ -6,6 +6,15 @@
 		<div class="maincontent clear">
 			<div class="about">
 				<h2>Contact us</h2>
+				<?php 
+            		include_once 'class/Contact.php';
+            		$ct = new Contact();
+				if ($_SERVER['REQUEST_METHOD']=='POST') {
+					$result=$ct->messagesave($_POST);
+					if ($result) {
+						echo $result;
+					}
+				}?>
 			<form action="" method="post">
 				<table>
 				<tr>
@@ -30,7 +39,7 @@
 				<tr>
 					<td>Your Message:</td>
 					<td>
-					<textarea></textarea>
+					<textarea name="message"></textarea>
 					</td>
 				</tr>
 				<tr>

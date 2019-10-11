@@ -7,7 +7,10 @@ body{font-family: 'Source Sans Pro', sans-serif;font-size:14px;line-height:18px;
   margin: 0 auto;
   width: 928px;
 }
-.clear{overflow:hidden;}
+.clear {
+  overflow: hidden;
+  
+}
 input[type="text"], input[type="email"] {
   border: 1px solid #cfc5b6;
   border-radius: 3px;
@@ -209,6 +212,7 @@ margin:200px 0;
   line-height: 24px;
   margin-bottom: 10px;
   text-align: justify;
+  min-height: 200px;
 }
 .notfound {
   min-height: 400px;
@@ -357,8 +361,9 @@ margin:200px 0;
 .footermenu ul li{display:inline-block;}
 .footermenu ul li a {
   color: #E6AF4B;
-  font-size: 18px;
+  font-size: 19px;
   margin-right: 5px;
+  text-decoration: none;
 }
 .footersection p{}
 
@@ -396,8 +401,20 @@ margin:200px 0;
  transition:.6s;
 }
 .items:hover .shadow{top:0}
-
-
+.item1 {
+  margin-bottom: 23px;
+  margin-top: 24px;
+  text-align: center;
+}
+.pagination{}
+.pagination a {
+  padding: 6px 10px;
+  font-size: 20px;
+  text-decoration: none;
+  border: 2px solid cadetblue;
+  border-radius: 4px;
+  margin: 2px;
+}
 
 
 

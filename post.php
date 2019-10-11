@@ -22,7 +22,7 @@ if(!isset($_GET['id']) || $_GET['id']==NULL ) {
 
 					<h4><?php echo $fm->formateDate($result['date']);?> By <a href="#"><?php echo $result['author'];?></a></h4>
 
-					<img src="admin/upload/<?php echo $result['image'];?>" alt="post image"/>
+					<img src="admin/<?php echo $result['image'];?>" alt="post image"/>
 
 					<?php echo $result['body'];?>
 
@@ -39,7 +39,7 @@ if(!isset($_GET['id']) || $_GET['id']==NULL ) {
 								?>
 
 								<a href="post.php?id=<?php echo $result['id'];?>">
-									<img src="admin/upload/<?php echo $result['image'];?>" alt="post image"/>
+									<img src="admin/<?php echo $result['image'];?>" alt="post image"/>
 								</a>
 
 							<?php } } else { echo "No related post availa !!";} ?>

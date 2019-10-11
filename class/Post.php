@@ -43,5 +43,29 @@ class Post{
 
 		    }
 	}
+
+	public function postedit($id){
+		$query = "SELECT * from tbl_post where id='$id'";
+		$result = $this->db->select($query);
+		return $result;
+	}
+
+	public function updatepost($cat ,$id){
+		//die($cat);
+		$query = "UPDATE tbl_post set 
+		cat='$cat'
+		where id = '$id'";
+		$result = $this->db->update($query);
+		if ($result) {
+			die("Update Successfuly");
+		}else{
+			die("Update not Successfuly");
+		}
+	}
+
+	public function memberdel($delid){
+		$query ="DELETE FROM tbl_member where id='$delid'";
+		$result = $this->db->delete($query);
+	}
 }
 ?>

@@ -1,0 +1,95 @@
+
+  .headersection {
+    background: #216329 none repeat scroll 0 0;
+}
+
+.icon a {
+  background: #0c9d49 none repeat scroll 0 0;
+ 
+}
+input[type="submit"] {
+  background: #119516 none repeat scroll 0 0;
+}
+.searchbtn input[type="submit"]:hover {
+  background: #17c81e none repeat scroll 0 0;
+}
+.searchbtn input[type="submit"]:hover {
+  background: #b7801c none repeat scroll 0 0;
+}
+.searchbtn input[type="text"] {
+  border: 1px solid #7CB386;
+  background: #449144;
+}
+.searchbtn input[type="submit"]:hover {
+  background: #2cb71c none repeat scroll 0 0;
+}
+.searchbtn input[type="submit"] {
+  border: 1px solid #3e9781;
+}
+.searchbtn input[type="submit"]:hover {
+  border: 1px solid #12a80a;
+}
+.navsection {
+  background: none repeat scroll 0 0 #11770c;
+}
+.navsection ul li a:hover, #active {
+  background: #519D71;
+  color: #ecf2ea;
+}
+.navsection ul li {
+  border-left: 1px solid #0db35a;
+  border-right: 1px solid #0bd009;
+}
+.footersection {
+  background: #216329;
+}
+.footermenu ul li a {
+  color: #3CD521;
+ 
+}
+.maincontent {
+  background: #bfe8be none repeat scroll 0 0;
+  border: 1px solid #2acc0e;
+}
+.samepost h2, .about h2 {
+  border-bottom: 2px solid #6b8e30;
+  color: #11ac17;
+}
+.sidebar {
+  background: #bfe8be none repeat scroll 0 0;
+  border: 1px solid #0cac0b;
+}
+.samesidebar h2 {
+  background: #6fbf85 none repeat scroll 0 0;
+  border-bottom: 2px solid #0d8249;
+}
+.samesidebar ul li a {
+  color: #008167;
+}
+.samesidebar ul li {
+  border-bottom: 1px dashed #1cc833;
+}
+.popular h3 {
+  border-bottom: 1px dashed #11e619;
+}
+.popular img {
+  background: #c4b4b4 none repeat scroll 0 0;
+  border: 1px solid #07913a;
+}
+.contentsection {
+  background: #ffffff none repeat scroll 0 0;
+  border: 1px solid #2fca35;
+}
+.headersection {
+  background: #216329 none repeat scroll 0 0;
+  color: #fff;
+}
+.relatedpost h2 {
+  background: #4be67d none repeat scroll 0 0;
+  border-bottom: 2px solid #10b91f !important;
+}
+.samepost h2 a {
+    color: #0d8249;
+    text-decoration: none;
+}
+

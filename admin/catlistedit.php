@@ -1,47 +1,71 @@
-
 <?php include 'inc/header.php';?>
 <?php include 'inc/sidebar.php';?>
+
+<?php
+if (!isset($_GET['catid']) || ($_GET['catid']) == NULL ) {
+echo "<script> window.location='catlist.php'; </script>";
+//header("Location:catlist.php");
+} else{
+$id=$_GET['catid'];
+}
+?>
+
+
+<div class="grid_10" >
+<div class="box round first grid">
+<h2>
+ADD New Category
+</h2>
+<div class="block copyblock"> 
 <?php 
-	$path = realpath(dirname(__FILE__));
-	include $path.'/../class/Category.php';
-	$ct = new Category();
+if ($_SERVER['REQUEST_METHOD']=='POST') {
+$name=$_POST['name'];
+$name=mysqli_real_escape_string($db->link,$name);
+
+if (empty($name)) {
+echo "<span class='error'> Field must not be empty</span>";
+} else {
+$query="UPDATE tbl_category
+SET 
+name='$name'
+where id='$id';
+";
+$updated_row=$db->update($query);
+if ($updated_row) {
+echo "<span class='success'> Category Updated Successfuly</span>";
+} else {
+ echo "<span class='error'> Category Not Updated </span>";
+}
+
+}
+}
 ?>
 <?php
-if (isset($_GET['eid'])) {
-	$id = $_GET['eid'];
-	?>
-	<div class="grid_10">
-		<div class="box round first grid">
-			<h2>Category List</h2>
+$query="SELECT * from tbl_category where id='$id' order by id desc";
+$category=$db->select($query);
+while ($result=$category->fetch_assoc()) {
 
-					<?php 
-					if (isset($_POST['submit'])) {
-						$name = $_POST['name'];
-						$ct->updatecat($name,$id);
-					}
-					?>	
-					<form action="" method="post"> 
-						<?php 
-						$result = $ct->catedit($id);
-						if ($result) {
-							while ($data = $result->fetch_assoc()) {?>
-						<input type="text" value="<?php echo $data['name'];?>" name="name">
-						<?php } } ?>
-						<button type="submit" name="submit" class="btn btn-primary btn-block">Submit</button>
-					</form>
-					</div>
-				</div>
-	<?php } ?>
-	<script type="text/javascript">
-
-		$(document).ready(function () {
-			setupLeftMenu();
-
-			$('.datatable').dataTable();
-			setSidebarHeight();
+?>
 
 
-		});
-	</script>
-	<?php  include 'inc/footer.php';?>
+<form action="" method="POST">
+<table class="form">
+<tr>
+    <td>
+<input type="text" name="name" 
+value="<?php echo $result['name']?>" class="medium" />
+    </td>
+</tr>
+<tr>
+    <td>
+        <input type="submit" name="submit" value="Save" />
+    </td>
+</tr>
 
+</table>
+</form>
+<?php }?>
+
+</div>
+</div>
+</div>

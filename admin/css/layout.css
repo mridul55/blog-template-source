@@ -3,6 +3,9 @@
 Grey Box Method - Layout CSS
 ----------------------------------------------- */
 
+.success{color:green;font-size: 18px;};
+.error{color:red;font-size: 18px;}
+
 body {
   background: #fff none repeat scroll 0 0;
   color: #444;
