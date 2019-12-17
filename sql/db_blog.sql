@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Oct 11, 2019 at 06:25 AM
+-- Generation Time: Dec 17, 2019 at 06:44 AM
 -- Server version: 5.7.24
 -- PHP Version: 7.2.14
 
@@ -205,7 +205,7 @@ CREATE TABLE IF NOT EXISTS `tbl_user` (
   `details` text,
   `role` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_user`
@@ -216,7 +216,8 @@ INSERT INTO `tbl_user` (`id`, `name`, `username`, `password`, `email`, `details`
 (10, NULL, 'Rasid Khan', 'e10adc3949ba59abbe56e057f20f883e', NULL, NULL, 2),
 (7, NULL, 'mridul', 'e10adc3949ba59abbe56e057f20f883e', NULL, NULL, 2),
 (8, NULL, 'hasan', '827ccb0eea8a706c4c34a16891f84e7b', NULL, NULL, 0),
-(9, NULL, 'ahmed', '81dc9bdb52d04dc20036dbd8313ed055', NULL, NULL, 2);
+(9, NULL, 'ahmed', '81dc9bdb52d04dc20036dbd8313ed055', NULL, NULL, 2),
+(11, NULL, 'mamun', 'e10adc3949ba59abbe56e057f20f883e', NULL, NULL, 2);
 
 -- --------------------------------------------------------
 
