@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
    $name=mysqli_real_escape_string($db->link,$_POST['name']);
    $body=mysqli_real_escape_string($db->link,$_POST['body']);
    
-        if ($name == "" || $body == ""  ) {
+   if ($name == "" || $body == ""  ) {
    echo "<span class='error'> Field Must Not be Empty !</span>";
 }  else {
         

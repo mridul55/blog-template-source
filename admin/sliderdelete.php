@@ -19,7 +19,7 @@ if (!isset($_GET['delsliderid']) || ($_GET['delsliderid']) == NULL ) {
   $getData=$db->select($query);
   if ($getData) {
          $delimg = $getData->fetch_assoc();
-      $dellink=$delimg['image'];
+         $dellink=$delimg['image'];
          if (file_exists($dellink)) {
             unlink($dellink);
     }

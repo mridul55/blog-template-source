@@ -41,9 +41,9 @@ if (isset($_GET['delcat'])) {
 	<tr class="odd gradeX">
 		<td><?php echo $i; ?></td>
 		<td><?php echo $result['name'];?></td>
-		<td><a href="catlistedit.php?catid=<?php echo $result['id']; ?>" > Edit </a> || 
+		<td><a href="catlistedit.php?catid=<?php echo $result['id']; ?>"> Edit </a> || 
 
-			<a onclick="return confirm('Are U sure to Delete!');" href="?delcat=<?php echo $result['id']; ?>" > Delete </a> </td>
+		<a onclick="return confirm('Are U sure to Delete!');" href="?delcat=<?php echo $result['id']; ?>" > Delete </a> </td>
 
 	</tr>
 

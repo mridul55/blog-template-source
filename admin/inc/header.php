@@ -6,9 +6,7 @@ Session::checkSession();
 
 <?php
 $db = new Database();
-//$db->connectDB();
 $fm = new Format();
-
 ?>
 
 <?php

@@ -16,14 +16,14 @@
 <?php
 if ($_SERVER['REQUEST_METHOD']=='POST') {
     $username=$_POST['username'];
-     $password=$_POST['password'];
-      $role=$_POST['role'];
+    $password=$_POST['password'];
+    $role=$_POST['role'];
       //die($role);
 
     $username=mysqli_real_escape_string($db->link,$username);
     $password=mysqli_real_escape_string($db->link,$password);
     $role=mysqli_real_escape_string($db->link,$role);
-         
+    
     if (empty($username) || empty($password) || $role=='') {
         echo "<span class='error'> Field must not be empty</span>";
     } else {

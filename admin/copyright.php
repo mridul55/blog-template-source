@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
     if (empty($name)) {
         echo "<span class='error'> Field must not be empty</span>";
     } else {
-        $query="UPDATE tbl_footer set 
+    $query="UPDATE tbl_footer set 
     name='$name' where id='1'";
     $result=$db->update($query);
     if ($result) {

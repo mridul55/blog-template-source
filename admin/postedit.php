@@ -1,10 +1,5 @@
 <?php include 'inc/header.php';?>
 <?php include 'inc/sidebar.php';?>
-<?//php include '../class/Post.php';
-//$pt = new Post();
-?>
-
-
 <?php
 if (!isset($_GET['editpostid']) || ($_GET['editpostid']) == NULL ) {
 	echo "<script> window.location='postlist.php'; </script>";
@@ -113,12 +108,12 @@ if (!empty ($file_name)) {
 
 
 <div class="block">  
- <?php 
+<?php 
 $query="SELECT * from tbl_post where id='$postid' order by id desc";
 $getpost=$db->select($query);
 while ($postresult=$getpost->fetch_assoc()) {
 
- ?>
+?>
 
 <form action="" method="post" enctype="multipart/form-data">
 <table class="form">

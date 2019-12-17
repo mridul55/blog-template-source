@@ -11,8 +11,6 @@ include_once $path.'/helpers/Format.php';*/
 <?php include 'inc/header.php';?>
 <?php include "inc/slider.php";?>
 
-
-
 <?php
 $per_page=4;
 if (isset($_GET["page"])) {
@@ -34,7 +32,7 @@ $start_form=($page-1)*$per_page;
          while($result=$post->fetch_assoc()){
 		?>
 
-			<div class="samepost clear">
+			<div class="samepost clear"> 
 
 	<h2><a href="post.php?id=<?php echo $result['id'];?>"><?php echo $result['titel'];?></a></h2>
 

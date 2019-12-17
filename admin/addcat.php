@@ -9,7 +9,7 @@
     </h2>
     <div class="block copyblock"> 
 <?php
-if ($_SERVER['REQUEST_METHOD']=='POST') {
+ if ($_SERVER['REQUEST_METHOD']=='POST') {
     $name=$_POST['name'];
     $name=mysqli_real_escape_string($db->link,$name);
          

@@ -18,16 +18,16 @@ if (!isset($_GET['delpage']) || ($_GET['delpage']) == NULL ) {
 
 	
 
-  $delquery= "DELETE from add_page where id='$pageid'";
-   $delData=$db->delete($delquery);
-   if ($delData) {
+ $delquery= "DELETE from add_page where id='$pageid'";
+ $delData=$db->delete($delquery);
+ if ($delData) {
    	//die($delData);
-   	echo "<script>alert('Data Deleted successfully.');</script>";
-   	echo "<script>window.location ='index.php' ;</script>";
-   } else {
-   		echo "<script>alert('Data Not Deleted.');</script>";
-   	echo "<script>window.location ='index.php' ;</script>";
-   }
+  echo "<script>alert('Data Deleted successfully.');</script>";
+  echo "<script>window.location ='index.php' ;</script>";
+} else {
+ echo "<script>alert('Data Not Deleted.');</script>";
+ echo "<script>window.location ='index.php' ;</script>";
+}
 
 }
 

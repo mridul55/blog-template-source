@@ -6,7 +6,7 @@
 	$fm = new Format();
 ?>
 <!DOCTYPE html>
-<html>
+<html>   
 <head>
 	<?php include 'scripts/meta.php';?>
 	<?php include 'scripts/css.php';?>
